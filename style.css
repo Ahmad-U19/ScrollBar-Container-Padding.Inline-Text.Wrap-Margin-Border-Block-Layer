@@ -1,0 +1,56 @@
+html{
+    scrollbar-color: green red;
+    scrollbar-width: thin;
+}
+@layer one{
+    h2{
+        font-size: medium;
+        color: red;
+    }
+}
+@layer two{
+    h2{
+        font-size: small;
+        color: peru;
+    }
+}
+@layer three{
+    h2{
+        font-size: 50px;
+        color: yellowgreen;
+    }
+}
+
+#box{
+    border: 1px solid #000;
+    /* width: 60%;
+    aspect-ratio: 2 / 1; */
+    block-size: 900px;
+    inline-size: 700px;
+    background-color: lightgray;
+    overflow: auto;
+    scrollbar-color: pink purple;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    /* scrollbar-gutter: stable; */
+    padding-inline: 100px;
+    text-wrap: balance;
+    margin-inline: 50px 30px;
+    margin-block: 20px 50px;
+    border-inline: 20px 10px;
+    border-block-end: 10px 5px;
+    padding-block-start: 10%;
+    /* both-edges */
+    container: myself / inline-size;
+}
+@container myself (max-width: 500px){
+    #box{
+        background-color: red;
+    }
+    h2{
+        color: green;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 30px;
+        font-weight: bold;
+    }
+}
